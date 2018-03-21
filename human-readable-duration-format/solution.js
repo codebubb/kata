@@ -9,20 +9,26 @@ function humanReadableDuration(n) {
     const MINUTE = 60;
     const HOUR = 60 * MINUTE;
     
-    const returnObj = {
-        hour: Math.floor(n / HOUR),
-        minute: Math.floor((n % this.hour) / MINUTE),
-        second: n % MINUTE,
+     let hour = Math.floor(n / HOUR);
+     let minute = Math.floor((n - (hour * HOUR)) / MINUTE);
+      const second = n % MINUTE;
+    
+      let returnstr = '';
+
+    if (hour) {
+        returnstr += `${hour} ${hour > 1 ? 'hours' : 'hour'}`;
+        if (minute && second) returnstr += ', ';
+        if (minute && !second) returnstr += ' and ';
+    }
+    if (minute) {
+        returnstr += `${minute} ${minute > 1 ? 'minutes' : 'minute'}`;
+        if (second) returnstr += ' and ';
     }
 
-    return Object.keys(returnObj).reduce((total, key) => {
-        if(returnObj[key]) {
-            if(returnObj[key] === 1){
-                return total + returnObj[key] + ' ' + key + ' ';
-            } else {
-                return total + returnObj[key] + ' ' + key + 's ';
-            }
-        }
-        return total;
-    }, '').trim();
+    if (second) {
+        returnstr += `${second} ${second > 1 ? 'seconds' : 'second'}`;
+    }
+
+    return returnstr;
+    
 }
