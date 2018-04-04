@@ -11,7 +11,7 @@ function humanReadableDuration(n) {
     
     const returnObj = {
         hour: Math.floor(n / HOUR),
-        minute: Math.floor((n % this.hour) / MINUTE),
+        minute: Math.floor(n % HOUR),
         second: n % MINUTE,
     }
 

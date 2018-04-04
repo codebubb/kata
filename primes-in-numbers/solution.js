@@ -1,8 +1,10 @@
-const primeFactors = () => {
-    return true;
-}
+module.exports = { primeFactors: primeFactors };
+/**
+ * 
+ * @param {number} n 
+ * @return {string}
+ */
 
-
-module.exports = {
-    primeFactors: primeFactors,
+function primeFactors(n){
+    return "";
 }

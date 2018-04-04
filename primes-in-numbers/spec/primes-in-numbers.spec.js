@@ -1,7 +1,8 @@
-const solution = require('../solution');
+const {primeFactors} = require('../solution');
 
 describe('primes in numbers', () => {
     it('should give a response', () => {
-        expect(solution.primeFactors()).toBeTruthy();
+        expect(primeFactors()).toBeTruthy();
+        expect(typeof primeFactors()).toBe('string');
     });
 });
