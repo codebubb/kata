@@ -6,7 +6,7 @@ describe('human readable duration', () => {
     });
 
     it('should return 1 minute 1 second for singular numbers', () => {
-        expect(solution.humanReadableDuration(61)).toBe('1 minute 1 second');
+        expect(solution.humanReadableDuration(61)).toBe('1 minute and 1 second');
     });
 
     it('should return 32 seconds for a value of 32', () => {
@@ -14,10 +14,10 @@ describe('human readable duration', () => {
     });
 
     it('should return 1 minute 32 seconds for a value of 92', () => {
-        expect(solution.humanReadableDuration(92)).toBe('1 minute 32 seconds')
+        expect(solution.humanReadableDuration(92)).toBe('1 minute and 32 seconds')
     });
 
     it('should return 3 hours 1 minute and 32 seconds', () => {
-        expect(solution.humanReadableDuration(10892)).toBe('3 hours 1 minute 32 seconds')
+        expect(solution.humanReadableDuration(10892)).toBe('3 hours, 1 minute and 32 seconds')
     })
 });
