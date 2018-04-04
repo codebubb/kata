@@ -20,4 +20,8 @@ describe('human readable duration', () => {
     it('should return 3 hours 1 minute and 32 seconds', () => {
         expect(solution.humanReadableDuration(10892)).toBe('3 hours, 1 minute and 32 seconds')
     })
+
+    it('should return 3 hours and 32 seconds', () => {
+        expect(solution.humanReadableDuration(10832)).toBe('3 hours and 32 seconds');
+    });
 });
