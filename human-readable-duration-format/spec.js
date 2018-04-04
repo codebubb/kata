@@ -24,4 +24,13 @@ describe('human readable duration', () => {
     it('should return 3 hours and 32 seconds', () => {
         expect(solution.humanReadableDuration(10832)).toBe('3 hours and 32 seconds');
     });
+
+    it('should return 3 days, 3 hours, 3 minutes and 32 seconds', () => {
+        // 3 days = 3 x 24 x 60 x 60 = 259,200
+        // 3 hours = 3 x 60 x 60 = 10,800
+        // 3 minutes = 3 x 60 = 180
+        // + 32 seconds 
+        // == 270,212
+        expect(solution.humanReadableDuration(270212)).toBe('3 days, 3 hours, 3 minutes and 32 seconds');
+    })
 });
