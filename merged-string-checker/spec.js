@@ -12,4 +12,16 @@ describe('can merge strings', () => {
     it('should merge cod wars', () => {
         expect(solution.isMerge('codewars', 'cod', 'wars')).toBe(false);
     });
+
+    it('should merge happ y', () => {
+        expect(solution.isMerge('happy', 'happ', 'y'));
+    })
+
+    it('should merge ypaph thbiryad', () => {
+        expect(solution.isMerge('happybirthday', 'ypaph', 'thbiryad'));
+    })
+
+    it('should not merge abc def', () => {
+        expect(solution.isMerge('abcdefg', 'abc', 'def'));
+    })
 });
