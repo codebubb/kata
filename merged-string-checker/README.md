@@ -9,3 +9,10 @@ The restriction is that the characters in part1 and part2 are in the same order 
 The interviewer gives you the following example and tells you to figure out the rest from the given test cases.
 
 For example:
+```
+'codewars' is a merge from 'cdw' and 'oears':
+
+    s:  c o d e w a r s   = codewars
+part1:  c   d   w         = cdw
+part2:    o   e   a r s   = oears
+```
