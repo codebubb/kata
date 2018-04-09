@@ -17,8 +17,8 @@ describe('can merge strings', () => {
         expect(solution.isMerge('happy', 'happ', 'y')).toBe(true);
     })
 
-    it('should merge ypaph thbiryad', () => {
-        expect(solution.isMerge('happybirthday', 'ypaph', 'thbiryad')).toBe(true);
+    it('should not merge ypaph thbiryad', () => {
+        expect(solution.isMerge('happybirthday', 'ypaph', 'thbiryad')).toBe(false);
     })
 
     it('should not merge abc def', () => {
