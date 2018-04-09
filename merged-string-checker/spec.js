@@ -9,7 +9,7 @@ describe('can merge strings', () => {
         expect(solution.isMerge('codewars', 'cdw', 'oears')).toBe(true);
     });
 
-    it('should merge cod wars', () => {
+    it('should not merge cod wars', () => {
         expect(solution.isMerge('codewars', 'cod', 'wars')).toBe(false);
     });
 
