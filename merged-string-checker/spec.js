@@ -36,4 +36,16 @@ describe('can merge strings', () => {
     it('should merge when one string is longer than the other', () => {
         expect(solution.isMerge('abcdef', 'abc', 'defg')).toBe(false);
     });
+
+    it('should handle empty parts', () => {
+        expect(solution.isMerge('abc def', 'abc', 'def')).toBe(true);
+    });
+
+    it('should NOT create codewars from codes | wars', () => {
+        expect(solution.isMerge('codewars', 'codes', 'wars')).toBe(false);
+    })
 });
+
+//  can handle empty parts
+// can handle extra characters
+// can handle bananas
