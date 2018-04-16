@@ -1,8 +1,7 @@
 module.exports = { alphanumeric };
 
-function alphanumeric(string){
-    const regex = /[\w]*/;
-    console.log(string.match(regex))
-    return string.match(regex)[0].length === string.length;   
+const alphanumeric = (string) => {
+    const regex = /[a-zA-Z0-9]+/;
+    const match = string.match(regex);
+    return !!match && match[0].length === string.length;   
 }
-
